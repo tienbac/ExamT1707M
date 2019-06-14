@@ -111,7 +111,7 @@ public class DataConnectionHelper {
         builder.append("CREATE TABLE " + cObject.getSimpleName() + "s ( ");
         for (int i =0; i < lists.size(); i++){
             ObjectSql objectSql = lists.get(i);
-            if (objectSql.getName().equalsIgnoreCase("id")){
+            if (objectSql.getName().equalsIgnoreCase("id") || objectSql.getType().equals("HashMap")){
                 lists.remove(objectSql);
             }
         }
